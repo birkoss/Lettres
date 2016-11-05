@@ -13,10 +13,12 @@ public class Word : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
     public GameObject screenWin;
 
+    private int nb_tries;
+
     private string word;
 
 	void Start() {
-        ChangeWord("ABC");
+        ChangeWord("LA");
 	}
 
 
@@ -27,11 +29,13 @@ public class Word : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
 
     public void ChangeWord() {
-        screenWin.gameObject.SetActive(false);
-        ChangeWord("PROFESSEUR");
+        screenWin.gameObject.GetComponent<Win>().Close();
+        ChangeWord("MA");
     }
 
     public void HasChanged() {
+        nb_tries++;
+
         System.Text.StringBuilder builder = new System.Text.StringBuilder();
         foreach (Transform slotTransform in containerDestination) {
             GameObject item = slotTransform.GetComponent<Slot>().item;
@@ -45,13 +49,14 @@ public class Word : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
         Debug.Log("Current word:" + builder.ToString());
 
         if (builder.ToString() == word) {
-            screenWin.gameObject.SetActive(true);
+            screenWin.gameObject.GetComponent<Win>().Show(nb_tries - word.Length);
         }
     }
 
 
     private void ChangeWord(string new_word) {
         word = new_word;
+        nb_tries = 0;
 
         // Delete all existing slots
         foreach (Transform child in containerOrigin) {

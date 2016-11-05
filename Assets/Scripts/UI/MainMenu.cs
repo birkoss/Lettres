@@ -44,8 +44,13 @@ public class MainMenu : MonoBehaviour {
     }
 
 
-    private void LoadMainMenu() {
+    public void LoadMainMenu() {
         SceneManager.LoadScene("main");
+    }
+
+
+    public void LoadNextLevel() {
+        ExecuteEvents.ExecuteHierarchy<IChangeWord>(gameObject, null, (x,y) => x.ChangeWord());
     }
 
 
