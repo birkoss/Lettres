@@ -14,7 +14,7 @@ public class Word : MonoBehaviour, IHasChanged {
     private string word;
 
 	void Start() {
-        ChangeWord("AVION");
+        ChangeWord("POMME");
         HasChanged();
 	}
 
