@@ -22,6 +22,7 @@ public class Word : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
     public void ResetWord() {
         Debug.Log("Reset Word...");
+        ChangeWord(word);
     }
 
 
