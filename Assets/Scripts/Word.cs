@@ -51,6 +51,7 @@ public class Word : MonoBehaviour, IHasChanged {
             new_letter.transform.SetParent(new_slot.transform);
             new_letter.transform.localScale = new Vector3(1f, 1f, 1f);
             new_letter.transform.GetChild(0).gameObject.GetComponent<Text>().text = word[i].ToString();
+            new_letter.name = word[i].ToString();
 
             // Add new destination slots
             new_slot = Instantiate(slot);

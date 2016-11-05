@@ -17,24 +17,14 @@ public class Slot : MonoBehaviour, IDropHandler {
 
 
     public void OnDrop(PointerEventData eventData) {
-        if (!item) {
-            DragHandler.itemBeginDragged.transform.SetParent(transform);
-            ExecuteEvents.ExecuteHierarchy<IHasChanged>(gameObject, null, (x,y) => x.HasChanged());
+        // Get the starting position of the dragged item, and swap it with the existing item at this slot
+        if (item) {
+            Transform starting_parent = DragHandler.itemBeginDragged.transform.gameObject.GetComponent<DragHandler>().GetParent();
+            item.transform.SetParent(starting_parent);
         }
 
-        /*
-        if (!item)
-        {
-            DragHandler.item.transform.SetParent(transform);
-        } else
-        {
-            Transform aux = DragHandler.item.transform.parent;
-            DragHandler.item.transform.SetParent(transform);
-            item.transform.SetParent(aux);
-
-        }
-
-        */
+        DragHandler.itemBeginDragged.transform.SetParent(transform);
+        ExecuteEvents.ExecuteHierarchy<IHasChanged>(gameObject, null, (x,y) => x.HasChanged());
     }
 
 

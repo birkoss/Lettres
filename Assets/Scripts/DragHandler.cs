@@ -45,4 +45,9 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     }
 
 
+    public Transform GetParent() {
+        return startParent;
+    }
+
+
 }
