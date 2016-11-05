@@ -4,20 +4,31 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Word : MonoBehaviour, IHasChanged {
+public class Word : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
     public Transform containerDestination;
     public Transform containerOrigin;
 
     public GameObject letter;
     public GameObject slot;
 
+    public GameObject screenWin;
+
     private string word;
 
 	void Start() {
-        ChangeWord("PROFESSEUR");
-        HasChanged();
+        ChangeWord("ABC");
 	}
 
+
+    public void ResetWord() {
+        Debug.Log("Reset Word...");
+    }
+
+
+    public void ChangeWord() {
+        screenWin.gameObject.SetActive(false);
+        ChangeWord("PROFESSEUR");
+    }
 
     public void HasChanged() {
         System.Text.StringBuilder builder = new System.Text.StringBuilder();
@@ -29,7 +40,12 @@ public class Word : MonoBehaviour, IHasChanged {
                 builder.Append("#");
             }
         }
+
         Debug.Log("Current word:" + builder.ToString());
+
+        if (builder.ToString() == word) {
+            screenWin.gameObject.SetActive(true);
+        }
     }
 
 
@@ -38,6 +54,9 @@ public class Word : MonoBehaviour, IHasChanged {
 
         // Delete all existing slots
         foreach (Transform child in containerOrigin) {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in containerDestination) {
             Destroy(child.gameObject);
         }
 
@@ -67,5 +86,11 @@ public class Word : MonoBehaviour, IHasChanged {
 namespace UnityEngine.EventSystems {
     public interface IHasChanged : IEventSystemHandler {
         void HasChanged();
+    }
+    public interface IResetWord : IEventSystemHandler {
+        void ResetWord();
+    }
+    public interface IChangeWord : IEventSystemHandler {
+        void ChangeWord();
     }
 }
