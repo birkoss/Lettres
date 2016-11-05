@@ -7,16 +7,17 @@ using UnityEngine.EventSystems;
 public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
     public static GameObject itemBeginDragged;
+    public static Transform canvas;
 
     private Vector3 startPosition;
     private Transform startParent;     // The original parent of the item
-    private Transform globalParent;    // The global parent to be always on top
+    private Transform globalParent;    // The container to place the dragged object
 
     public void OnBeginDrag(PointerEventData eventData) {
         itemBeginDragged = gameObject;
         startPosition = transform.position;
         startParent = transform.parent;
-        globalParent = transform.parent.parent.parent;
+        globalParent = transform.parent.parent.gameObject.GetComponent<Container>().canvas.transform;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
         transform.SetParent(globalParent);
         transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
