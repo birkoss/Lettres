@@ -1,36 +1,296 @@
 <WordsList>
     <Words>
-        <Word name="apple">
+        <Word name="foods/apple-1">
             <fr>POMME</fr>
             <en>APPLE</en>
         </Word>
-        <Word name="pineapple">
-            <fr>ANANAS</fr>
-            <en>PINEAPPLE</en>
+        <Word name="foods/asparagus">
+            <fr>ASPERGE</fr>
+            <en>ASPARAGUS</en>
         </Word>
-        <Word name="cherries">
-            <fr>CERISE</fr>
-            <en>CHERRIES</en>
+        <Word name="foods/aubergine">
+            <fr>AUBERGINE</fr>
+            <en>AUBERGINE</en>
         </Word>
-        <Word name="banana">
+        <Word name="foods/avocado">
+            <fr>AVOCAT</fr>
+            <en>AVOCADO</en>
+        </Word>
+        <Word name="foods/bacon">
+            <fr>BACON</fr>
+            <en>BACON</en>
+        </Word>
+        <Word name="foods/banana">
             <fr>BANANE</fr>
             <en>BANANA</en>
         </Word>
-        <Word name="tomato">
-            <fr>TOMATE</fr>
-            <en>TOMATO</en>
+        <Word name="foods/blueberries">
+            <fr>BLEUET</fr>
+            <en>BLUEBERRIES</en>
         </Word>
-        <Word name="strawberry">
-            <fr>FRAISE</fr>
-            <en>STRAWBERRY</en>
+        <Word name="foods/bowl-1">
+            <fr>BOL</fr>
+            <en>BOWL</en>
         </Word>
-        <Word name="grapes">
+        <Word name="foods/bread-1">
+            <fr>PAIN</fr>
+            <en>BREAD</en>
+        </Word>
+        <Word name="foods/broccoli">
+            <fr>BROCOLI</fr>
+            <en>BROCCOLI</en>
+        </Word>
+        <Word name="foods/cabbage">
+            <fr>CHOUX</fr>
+            <en>CABBAGE</en>
+        </Word>
+        <Word name="foods/cake">
+            <fr>GATEAU</fr>
+            <en>CAKE</en>
+        </Word>
+        <Word name="foods/candy">
+            <fr>BONBON</fr>
+            <en>CANDY</en>
+        </Word>
+        <Word name="foods/carrot">
+            <fr>CAROTTE</fr>
+            <en>CARROT</en>
+        </Word>
+        <Word name="foods/cauliflower">
+            <fr>CHOU-FLEUR</fr>
+            <en>CAULIFLOWER</en>
+        </Word>
+        <Word name="foods/cereals">
+            <fr>CEREALES</fr>
+            <en>CEREALS</en>
+        </Word>
+        <Word name="foods/cheese-1">
+            <fr>FROMAGE</fr>
+            <en>CHEESE</en>
+        </Word>
+        <Word name="foods/cherries">
+            <fr>CERISE</fr>
+            <en>CHERRIES</en>
+        </Word>
+        <Word name="foods/chili">
+            <fr>PIMENT</fr>
+            <en>CHILI</en>
+        </Word>
+        <Word name="foods/chips">
+            <fr>CROUSTILLES</fr>
+            <en>CHIPS</en>
+        </Word>
+        <Word name="foods/chocolate">
+            <fr>CHOCOLAT</fr>
+            <en>CHOCOLATE</en>
+        </Word>
+        <Word name="foods/coffee">
+            <fr>CAFÉ</fr>
+            <en>COFFEE</en>
+        </Word>
+        <Word name="foods/cookies">
+            <fr>BISCUIT</fr>
+            <en>COOKIES</en>
+        </Word>
+        <Word name="foods/corn">
+            <fr>MAÏS</fr>
+            <en>CORN</en>
+        </Word>
+        <Word name="foods/croissant">
+            <fr>CROISSANT</fr>
+            <en>CROISSANT</en>
+        </Word>
+        <Word name="foods/cucumber">
+            <fr>CONCOMBRE</fr>
+            <en>CUCUMBER</en>
+        </Word>
+        <Word name="foods/cupcake">
+            <fr>CUPCAKE</fr>
+            <en>CUPCAKE</en>
+        </Word>
+        <Word name="foods/cutlery">
+            <fr>USTENSILES</fr>
+            <en>CUTLERY</en>
+        </Word>
+        <Word name="foods/doughnut-1">
+            <fr>BEIGNE</fr>
+            <en>DOUGHNUT</en>
+        </Word>
+        <Word name="foods/egg">
+            <fr>OEUF</fr>
+            <en>EGG</en>
+        </Word>
+        <Word name="foods/fish">
+            <fr>POISSON</fr>
+            <en>FISH</en>
+        </Word>
+        <Word name="foods/flour">
+            <fr>FARINE</fr>
+            <en>FLOUR</en>
+        </Word>
+        <Word name="foods/fork">
+            <fr>FOURCHETTE</fr>
+            <en>FORK</en>
+        </Word>
+        <Word name="foods/fries">
+            <fr>FRITTES</fr>
+            <en>FRIES</en>
+        </Word>
+        <Word name="foods/garlic">
+            <fr>AIL</fr>
+            <en>GARLIC</en>
+        </Word>
+        <Word name="foods/grapes">
             <fr>RAISIN</fr>
             <en>GRAPES</en>
         </Word>
-        <Word name="cucumber">
-            <fr>CORNICHON</fr>
-            <en>CUCUMBER</en>
+        <Word name="foods/hamburguer">
+            <fr>HAMBURGER</fr>
+            <en>HAMBURGER</en>
+        </Word>
+        <Word name="foods/hot-dog">
+            <fr>HOT-DOG</fr>
+            <en>HOT-DOG</en>
+        </Word>
+        <Word name="foods/ice-cream-11">
+            <fr>CRÈME GLACÉE</fr>
+            <en>ICE CREAM</en>
+        </Word>
+        <Word name="foods/knife">
+            <fr>COUTEAU</fr>
+            <en>KNIFE</en>
+        </Word>
+        <Word name="foods/lemon-1">
+            <fr>CITRON</fr>
+            <en>LEMON</en>
+        </Word>
+        <Word name="foods/lime">
+            <fr>LIME</fr>
+            <en>LIME</en>
+        </Word>
+        <Word name="foods/milk-1">
+            <fr>LAIT</fr>
+            <en>MILK</en>
+        </Word>
+        <Word name="foods/mushrooms">
+            <fr>CHAMPIGNONS</fr>
+            <en>MUSHROOMS</en>
+        </Word>
+        <Word name="foods/mustard-1">
+            <fr>MOUTARDE</fr>
+            <en>MUSTARD</en>
+        </Word>
+        <Word name="foods/mustard-2">
+            <fr>KETCHUP</fr>
+            <en>KETCHUP</en>
+        </Word>
+        <Word name="foods/olives">
+            <fr>OLIVES</fr>
+            <en>OLIVES</en>
+        </Word>
+        <Word name="foods/onion-1">
+            <fr>OIGNON</fr>
+            <en>ONION</en>
+        </Word>
+        <Word name="foods/orange">
+            <fr>ORANGE</fr>
+            <en>ORANGE</en>
+        </Word>
+        <Word name="foods/pancakes-1">
+            <fr>CRÈPES</fr>
+            <en>PANCAKES</en>
+        </Word>
+        <Word name="foods/peach">
+            <fr>PÈCHE</fr>
+            <en>PEACH</en>
+        </Word>
+        <Word name="foods/pear">
+            <fr>POIRE</fr>
+            <en>PEAR</en>
+        </Word>
+        <Word name="foods/peas">
+            <fr>POIS</fr>
+            <en>PEAS</en>
+        </Word>
+        <Word name="foods/pepper">
+            <fr>POIVRON</fr>
+            <en>PEPPER</en>
+        </Word>
+        <Word name="foods/pineapple">
+            <fr>ANANAS</fr>
+            <en>PINEAPPLE</en>
+        </Word>
+        <Word name="foods/pint">
+            <fr>BIÈRE</fr>
+            <en>BEER</en>
+        </Word>
+        <Word name="foods/pizza">
+            <fr>PIZZA</fr>
+            <en>PIZZA</en>
+        </Word>
+        <Word name="foods/pomegranate">
+            <fr>POMME GRENADE</fr>
+            <en>POMEGRANATE</en>
+        </Word>
+        <Word name="foods/potatoes-2">
+            <fr>PATATES</fr>
+            <en>POTATOES</en>
+        </Word>
+        <Word name="foods/pretzel">
+            <fr>BRETZEL</fr>
+            <en>PRETZEL</en>
+        </Word>
+        <Word name="foods/pumpkin">
+            <fr>CITROUILLE</fr>
+            <en>PUMPKIN</en>
+        </Word>
+        <Word name="foods/radish">
+            <fr>RADIS</fr>
+            <en>RADISH</en>
+        </Word>
+        <Word name="foods/raspberry">
+            <fr>FRAMBOISE</fr>
+            <en>RASPBERRY</en>
+        </Word>
+        <Word name="foods/sandwich-1">
+            <fr>SANDWICH</fr>
+            <en>SANDWICH</en>
+        </Word>
+        <Word name="foods/sausage">
+            <fr>SAUCISSE</fr>
+            <en>SAUSAGE</en>
+        </Word>
+        <Word name="foods/spaguetti">
+            <fr>SPAGHETTI</fr>
+            <en>SPAGHETTI</en>
+        </Word>
+        <Word name="foods/spatula">
+            <fr>SPATULE</fr>
+            <en>SPATULA</en>
+        </Word>
+        <Word name="foods/spoon">
+            <fr>CUILLÈRE</fr>
+            <en>SPOON</en>
+        </Word>
+        <Word name="foods/strawberry">
+            <fr>FRAISE</fr>
+            <en>STRAWBERRY</en>
+        </Word>
+        <Word name="foods/sushi-2">
+            <fr>SUSHI</fr>
+            <en>SUSHI</en>
+        </Word>
+        <Word name="foods/tomato">
+            <fr>TOMATE</fr>
+            <en>TOMATO</en>
+        </Word>
+        <Word name="foods/watermelon">
+            <fr>MELON D'EAU</fr>
+            <en>WATERMELON</en>
+        </Word>
+        <Word name="foods/whisk">
+            <fr>FOUET</fr>
+            <en>WHISK</en>
         </Word>
     </Words>
 </WordsList>
