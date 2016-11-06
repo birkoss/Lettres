@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Word : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
+public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
     public Transform containerDestination;
     public Transform containerOrigin;
     public GameObject image;
@@ -20,17 +20,10 @@ public class Word : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
     private Book book;
 
 	void Start() {
-        Debug.Log("Mode:" + MainMenu.mode);
-        book = new Book();
 
-        book.Add("apple", "Pomme");
-        book.Add("pineapple", "Ananas");
-        book.Add("cherries", "Cerise");
-        book.Add("banana", "Banane");
-        book.Add("tomato", "Tomate");
-        book.Add("strawberry", "Fraise");
-        book.Add("grapes", "Raisin");
-        book.Add("cucumber", "Cornichon");
+        WordsList list = new WordsList();
+        list.Load("words");
+        book = new Book(list);
 
         ChangeWord(book.GetRandom());
 	}

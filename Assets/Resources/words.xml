@@ -1,0 +1,36 @@
+<WordsList>
+    <Words>
+        <Word name="apple">
+            <fr>POMME</fr>
+            <en>APPLE</en>
+        </Word>
+        <Word name="pineapple">
+            <fr>ANANAS</fr>
+            <en>PINEAPPLE</en>
+        </Word>
+        <Word name="cherries">
+            <fr>CERISE</fr>
+            <en>CHERRIES</en>
+        </Word>
+        <Word name="banana">
+            <fr>BANANE</fr>
+            <en>BANANA</en>
+        </Word>
+        <Word name="tomato">
+            <fr>TOMATE</fr>
+            <en>TOMATO</en>
+        </Word>
+        <Word name="strawberry">
+            <fr>FRAISE</fr>
+            <en>STRAWBERRY</en>
+        </Word>
+        <Word name="grapes">
+            <fr>RAISIN</fr>
+            <en>GRAPES</en>
+        </Word>
+        <Word name="cucumber">
+            <fr>CORNICHON</fr>
+            <en>CUCUMBER</en>
+        </Word>
+    </Words>
+</WordsList>
