@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
+public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler {
 
     public static GameObject itemBeginDragged;
     public static Transform canvas;
@@ -16,10 +16,26 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Transform startParent;     // The original parent of the item
     private Transform globalParent;    // The container to place the dragged object
 
+
+    public void OnPointerDown(PointerEventData eventData) {
+        if (!isDragable) {
+            return;
+        }
+
+        Debug.Log("OnPointerDown...");
+
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioDrag);
+
+        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+    }
+
+
     public void OnBeginDrag(PointerEventData eventData) {
         if (!isDragable) {
             return;
         }
+
+        Debug.Log("OnBeginDrag...");
 
         itemBeginDragged = gameObject;
         startPosition = transform.position;
@@ -27,7 +43,6 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         globalParent = transform.parent.parent.gameObject.GetComponent<Container>().canvas.transform;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
         transform.SetParent(globalParent);
-        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
     }
 
 
@@ -35,6 +50,8 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (!isDragable) {
             return;
         }
+
+        Debug.Log("OnDrag...");
 
         transform.position = Input.mousePosition;
     }
@@ -45,8 +62,9 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             return;
         }
 
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioDrag);
+
         itemBeginDragged = null;
-        transform.localScale = new Vector3(1f, 1f, 1f);
 
         // If the parent is still the global parent, reset it to the start parent
         if (transform.parent == globalParent) {
@@ -59,6 +77,10 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 
+
+    public void OnPointerUp(PointerEventData eventData) {
+        transform.localScale = new Vector3(1f, 1f, 1f);
+    }
 
     public Transform GetParent() {
         return startParent;

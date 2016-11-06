@@ -15,18 +15,24 @@ public class MainMenu : MonoBehaviour {
 
 
     public void PlayGame(int new_mode) {
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
+
         mode = new_mode;
         SceneManager.LoadScene("game");
     }
 
 
     public void GoHome() {
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
+
         confirmation.GetComponent<Confirmation>().ChangeText("Es-tu sur de vouloir retourner au menu?");
         callback = LoadMainMenu;
     }
 
 
     public void RestartGame() {
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
+
         confirmation.GetComponent<Confirmation>().ChangeText("Es-tu sur de vouloir recommencer ce mot?");
         callback = RestartCurrentLevel;
     }
@@ -37,24 +43,31 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void Ok() {
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
+
         confirmation.GetComponent<Confirmation>().Close();
         callback();
     }
 
 
     public void Cancel() {
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
+
         confirmation.GetComponent<Confirmation>().Close();
     }
 
 
     public void LoadMainMenu() {
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
         SceneManager.LoadScene("main");
     }
 
 
     public void LoadNextLevel() {
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
         ExecuteEvents.ExecuteHierarchy<IChangeWord>(gameObject, null, (x,y) => x.ChangeWord());
     }
+
 
 
 }

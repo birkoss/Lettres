@@ -17,6 +17,7 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
     private int nb_tries;
 
     private string word;
+    private string word_name;
     private Book book;
 
 	void Start() {
@@ -30,8 +31,8 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
 
     public void ResetWord() {
-        Debug.Log("Reset Word...");
-        ChangeWord(word);
+        Debug.Log("Reset Word..." + word);
+        ChangeWord(word_name);
     }
 
 
@@ -69,6 +70,7 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
 
     private void ChangeWord(string book_key) {
+        word_name = book_key;
         word = book.Get(book_key);
         nb_tries = 0;
 
