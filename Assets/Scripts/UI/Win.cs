@@ -10,6 +10,7 @@ public class Win : MonoBehaviour {
 
 
     public void Show(int errors) {
+        Debug.Log(errors);
         // Remove all previous stars
         for (int i=0; i<stars.Length; i++) {
             stars[i].SetActive(false);

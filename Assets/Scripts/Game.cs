@@ -57,6 +57,9 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
         if (builder.ToString() == word) {
             int nb_errors = nb_tries - word.Length;
+            if (MainMenu.mode == 1) {
+                nb_errors = nb_tries - 1;
+            }
             if (nb_errors < 0) {
                 nb_errors = 0;
             }
