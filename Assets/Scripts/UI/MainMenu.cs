@@ -6,13 +6,16 @@ using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour {
 
+    public static int mode;
+
     public GameObject confirmation;
 
     private delegate void ConfirmationCallback();
     private ConfirmationCallback callback;
 
 
-    public void PlayGame() {
+    public void PlayGame(int new_mode) {
+        mode = new_mode;
         SceneManager.LoadScene("game");
     }
 

@@ -9,11 +9,18 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public static GameObject itemBeginDragged;
     public static Transform canvas;
 
+    public bool isDragable = true;
+    public Sprite disable;
+
     private Vector3 startPosition;
     private Transform startParent;     // The original parent of the item
     private Transform globalParent;    // The container to place the dragged object
 
     public void OnBeginDrag(PointerEventData eventData) {
+        if (!isDragable) {
+            return;
+        }
+
         itemBeginDragged = gameObject;
         startPosition = transform.position;
         startParent = transform.parent;
@@ -25,11 +32,19 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
 
     public void OnDrag(PointerEventData eventData) {
+        if (!isDragable) {
+            return;
+        }
+
         transform.position = Input.mousePosition;
     }
 
 
     public void OnEndDrag(PointerEventData eventData) {
+        if (!isDragable) {
+            return;
+        }
+
         itemBeginDragged = null;
         transform.localScale = new Vector3(1f, 1f, 1f);
 
