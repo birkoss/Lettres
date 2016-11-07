@@ -62,7 +62,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             return;
         }
 
-        SoundEngine.instance.PlaySound(SoundEngine.instance.audioDrag);
+        // SoundEngine.instance.PlaySound(SoundEngine.instance.audioDrag);
 
         itemBeginDragged = null;
 
