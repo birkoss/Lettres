@@ -9,6 +9,7 @@ TODO
 * Remove the images in the resources root folder
 * Tweak the words list
   * Find new images (with outlines)
+* Add an english button in the homepage
 
 TWEAKS
 ======
