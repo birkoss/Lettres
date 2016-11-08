@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class Win : MonoBehaviour {
-
+public class ScreenWin : MonoBehaviour {
 
     public GameObject[] stars;
 
+    public Text textTitle;
+
 
     public void Show(int errors) {
+        textTitle.text = (PlayerPrefs.GetString("lang") == "fr" ? "Bravo!" : "Wonderful!");
         Debug.Log(errors);
 
         // Remove all previous stars

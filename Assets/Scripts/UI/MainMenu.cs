@@ -13,19 +13,33 @@ public class MainMenu : MonoBehaviour {
     private delegate void ConfirmationCallback();
     private ConfirmationCallback callback;
 
+    public void Start() {
+        string lang = PlayerPrefs.GetString("lang");
+        if (lang == null) {
+            lang = "fr";
+            PlayerPrefs.SetString("lang", lang);
+        }
+    }
+
 
     public void PlayGame(int new_mode) {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
 
+        Debug.Log("Mode:" + new_mode);
         mode = new_mode;
-        SceneManager.LoadScene("game");
+        GetComponent<Game>().screenGame.SetActive(true);
+        GetComponent<Game>().screenMenu.SetActive(false);
+        GetComponent<Game>().Init();
+
+        //SceneManager.LoadScene("game");
+
     }
 
 
     public void GoHome() {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
 
-        confirmation.GetComponent<Confirmation>().ChangeText("Es-tu sur de vouloir retourner au menu?");
+        confirmation.GetComponent<ScreenConfirmation>().ChangeText(PlayerPrefs.GetString("lang") == "fr" ? "Es-tu sur de vouloir retourner au menu?" : "Are you sure you want to return to the menu?");
         callback = LoadMainMenu;
     }
 
@@ -33,7 +47,7 @@ public class MainMenu : MonoBehaviour {
     public void RestartGame() {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
 
-        confirmation.GetComponent<Confirmation>().ChangeText("Es-tu sur de vouloir recommencer ce mot?");
+        confirmation.GetComponent<ScreenConfirmation>().ChangeText(PlayerPrefs.GetString("lang") == "fr" ? "Es-tu sur de vouloir recommencer ce mot?" : "Are you sure you want to re-try this word?");
         callback = RestartCurrentLevel;
     }
 
@@ -45,21 +59,32 @@ public class MainMenu : MonoBehaviour {
     public void Ok() {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
 
-        confirmation.GetComponent<Confirmation>().Close();
+        confirmation.GetComponent<ScreenConfirmation>().Close();
         callback();
+    }
+
+
+    public void ChangeLanguage() {
+        SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
+        
+        PlayerPrefs.SetString("lang", (PlayerPrefs.GetString("lang") == "fr" ? "en" : "fr"));
+        SceneManager.LoadScene("game");
     }
 
 
     public void Cancel() {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
 
-        confirmation.GetComponent<Confirmation>().Close();
+        confirmation.GetComponent<ScreenConfirmation>().Close();
     }
 
 
     public void LoadMainMenu() {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
-        SceneManager.LoadScene("main");
+
+        GetComponent<Game>().screenGame.SetActive(false);
+        GetComponent<Game>().screenWin.SetActive(false);
+        GetComponent<Game>().screenMenu.SetActive(true);
     }
 
 

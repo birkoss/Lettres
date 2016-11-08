@@ -13,6 +13,8 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
     public GameObject slot;
 
     public GameObject screenWin;
+    public GameObject screenGame;
+    public GameObject screenMenu;
 
     private int nb_tries;
 
@@ -25,8 +27,11 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
         WordsList list = new WordsList();
         list.Load("words");
         book = new Book(list);
+    }
 
+    public void Init() {
         ChangeWord(book.GetRandom());
+        // ChangeWord("foods/mushrooms");
 	}
 
 
@@ -37,7 +42,7 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
 
     public void ChangeWord() {
-        screenWin.gameObject.GetComponent<Win>().Close();
+        screenWin.gameObject.GetComponent<ScreenWin>().Close();
         ChangeWord(book.GetRandom());
     }
 
@@ -64,12 +69,13 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
             if (nb_errors < 0) {
                 nb_errors = 0;
             }
-            screenWin.gameObject.GetComponent<Win>().Show(nb_errors);
+            screenWin.gameObject.GetComponent<ScreenWin>().Show(nb_errors);
         }
     }
 
 
     private void ChangeWord(string book_key) {
+        print("ChangeWord:" + MainMenu.mode);
         word_name = book_key;
         word = book.Get(book_key);
         nb_tries = 0;

@@ -14,7 +14,8 @@ public class Book  {
 
 
     public string Get(string image) {
-        return words.Get(image).fr;
+        Word word = words.Get(image);
+        return (PlayerPrefs.GetString("lang") == "fr" ? word.fr : word.en);
     }
 
 
