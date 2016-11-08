@@ -11,7 +11,9 @@ public class Letter : MonoBehaviour {
 
 
     public void ChangeState(bool error = false) {
-        GetComponent<Image>().sprite = (error ? spriteError : spriteNormal);
+        if (GetComponent<DragHandler>().isDragable) {
+            GetComponent<Image>().sprite = (error ? spriteError : spriteNormal);
+        }
     }
 
 
