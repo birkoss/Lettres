@@ -84,7 +84,6 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
 
     private void ChangeWord(string book_key) {
-        print("ChangeWord:" + MainMenu.mode);
         word_name = book_key;
         word = book.Get(book_key);
         nb_tries = 0;

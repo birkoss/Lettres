@@ -25,7 +25,6 @@ public class MainMenu : MonoBehaviour {
     public void PlayGame(int new_mode) {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
 
-        Debug.Log("Mode:" + new_mode);
         mode = new_mode;
         GetComponent<Game>().screenGame.SetActive(true);
         GetComponent<Game>().screenMenu.SetActive(false);
@@ -66,7 +65,7 @@ public class MainMenu : MonoBehaviour {
 
     public void ChangeLanguage() {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
-        
+
         PlayerPrefs.SetString("lang", (PlayerPrefs.GetString("lang") == "fr" ? "en" : "fr"));
         SceneManager.LoadScene("game");
     }

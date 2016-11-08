@@ -13,7 +13,6 @@ public class ScreenWin : MonoBehaviour {
 
     public void Show(int errors) {
         textTitle.text = (PlayerPrefs.GetString("lang") == "fr" ? "Bravo!" : "Wonderful!");
-        Debug.Log(errors);
 
         // Remove all previous stars
         for (int i=0; i<stars.Length; i++) {
