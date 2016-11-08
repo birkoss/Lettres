@@ -10,7 +10,9 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public static Transform canvas;
 
     public bool isDragable = true;
-    public Sprite disable;
+
+    public Sprite spriteDisabled;
+    public Sprite spriteError;
 
     private Vector3 startPosition;
     private Transform startParent;     // The original parent of the item
@@ -22,8 +24,6 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             return;
         }
 
-        Debug.Log("OnPointerDown...");
-
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioDrag);
 
         transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
@@ -34,8 +34,6 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (!isDragable) {
             return;
         }
-
-        Debug.Log("OnBeginDrag...");
 
         itemBeginDragged = gameObject;
         startPosition = transform.position;
@@ -50,8 +48,6 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (!isDragable) {
             return;
         }
-
-        Debug.Log("OnDrag...");
 
         transform.position = Input.mousePosition;
     }
@@ -81,6 +77,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public void OnPointerUp(PointerEventData eventData) {
         transform.localScale = new Vector3(1f, 1f, 1f);
     }
+
 
     public Transform GetParent() {
         return startParent;

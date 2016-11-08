@@ -24,11 +24,12 @@ public class Slot : MonoBehaviour, IDropHandler {
                 return;
             }
             Transform starting_parent = DragHandler.itemBeginDragged.transform.gameObject.GetComponent<DragHandler>().GetParent();
+            item.GetComponent<Letter>().ChangeState();
             item.transform.SetParent(starting_parent);
         }
 
         DragHandler.itemBeginDragged.transform.SetParent(transform);
-        ExecuteEvents.ExecuteHierarchy<IHasChanged>(gameObject, null, (x,y) => x.HasChanged());
+        ExecuteEvents.ExecuteHierarchy<IHasChanged>(gameObject, null, (x,y) => x.HasChanged(DragHandler.itemBeginDragged));
     }
 
 

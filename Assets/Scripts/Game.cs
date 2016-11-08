@@ -46,7 +46,7 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
         ChangeWord(book.GetRandom());
     }
 
-    public void HasChanged() {
+    public void HasChanged(GameObject origin) {
         nb_tries++;
 
         System.Text.StringBuilder builder = new System.Text.StringBuilder();
@@ -70,6 +70,18 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
                 nb_errors = 0;
             }
             screenWin.gameObject.GetComponent<ScreenWin>().Show(nb_errors);
+        } else {
+            if (origin.transform.parent.transform.parent.name == "Letters - Destination") {
+                int current_letter_index = int.Parse(origin.transform.parent.name);
+                var incorrect_word = builder.ToString();
+                if (incorrect_word[current_letter_index] != word[current_letter_index]) {
+                    origin.GetComponent<Letter>().ChangeState(true);
+                } else {
+                    origin.GetComponent<Letter>().ChangeState();
+                }
+            } else {
+                origin.GetComponent<Letter>().ChangeState();
+            }
         }
     }
 
@@ -125,6 +137,7 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
             new_slot = Instantiate(slot);
             new_slot.transform.SetParent(containerDestination);
             new_slot.transform.localScale = new Vector3(1f, 1f, 1f);
+            new_slot.name = i.ToString();
 
             if (MainMenu.mode == 1 && i > 0) {
                 new_letter = Instantiate(letter);
@@ -132,8 +145,8 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
                 new_letter.transform.localScale = new Vector3(1f, 1f, 1f);
                 new_letter.transform.GetChild(0).gameObject.GetComponent<Text>().text = word[i].ToString();
                 new_letter.name = word[i].ToString();
-                new_letter.GetComponent<DragHandler>().isDragable = false;
-                new_letter.GetComponent<Image>().sprite = new_letter.GetComponent<DragHandler>().disable;
+
+                new_letter.GetComponent<Letter>().Disable();
 
             }
         }
@@ -162,7 +175,7 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
 namespace UnityEngine.EventSystems {
     public interface IHasChanged : IEventSystemHandler {
-        void HasChanged();
+        void HasChanged(GameObject origin);
     }
     public interface IResetWord : IEventSystemHandler {
         void ResetWord();
