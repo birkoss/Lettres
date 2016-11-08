@@ -61,6 +61,15 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
 
         Debug.Log("Current word:" + builder.ToString());
 
+        // Check errors
+        string choosen_word = builder.ToString();
+        for (int i=0; i<choosen_word.Length; i++) {
+            if (choosen_word[i] != '#') {
+                containerDestination.GetChild(i).GetChild(0).GetComponent<Letter>().ChangeState(choosen_word[i] != word[i]);
+            }
+        }
+
+        // Yay!
         if (builder.ToString() == word) {
             int nb_errors = nb_tries - word.Length;
             if (MainMenu.mode == 1) {
@@ -70,18 +79,6 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
                 nb_errors = 0;
             }
             screenWin.gameObject.GetComponent<ScreenWin>().Show(nb_errors);
-        } else {
-            if (origin.transform.parent.transform.parent.name == "Letters - Destination") {
-                int current_letter_index = int.Parse(origin.transform.parent.name);
-                var incorrect_word = builder.ToString();
-                if (incorrect_word[current_letter_index] != word[current_letter_index]) {
-                    origin.GetComponent<Letter>().ChangeState(true);
-                } else {
-                    origin.GetComponent<Letter>().ChangeState();
-                }
-            } else {
-                origin.GetComponent<Letter>().ChangeState();
-            }
         }
     }
 
