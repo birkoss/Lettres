@@ -18,11 +18,14 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Transform startParent;     // The original parent of the item
     private Transform globalParent;    // The container to place the dragged object
 
+    private bool hasDragged;            // To know if a drag occured
+
 
     public void OnPointerDown(PointerEventData eventData) {
         if (!isDragable) {
             return;
         }
+        hasDragged = false;
 
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioDrag);
 
@@ -34,6 +37,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (!isDragable) {
             return;
         }
+        hasDragged = true;
 
         itemBeginDragged = gameObject;
         startPosition = transform.position;
@@ -76,6 +80,27 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnPointerUp(PointerEventData eventData) {
         transform.localScale = new Vector3(1f, 1f, 1f);
+
+        if (!isDragable) {
+            return;
+        }
+
+        // If the letter has not been dragged, try to auto fill it
+        if (!hasDragged) {
+            // Get the other container (depending on our slot parent)
+            GameObject canvas = GameObject.Find("Canvas");
+            GameObject other_container = (canvas.GetComponent<Game>().containerOrigin.gameObject == transform.parent.parent.gameObject ? canvas.GetComponent<Game>().containerDestination.gameObject : canvas.GetComponent<Game>().containerOrigin.gameObject);
+
+            // First the first available spot
+            for (int i=0; i<other_container.transform.childCount; i++) {
+                if (other_container.transform.GetChild(i).childCount == 0) {
+                    transform.SetParent(other_container.transform.GetChild(i));
+                    GetComponent<Letter>().ChangeState();
+                    ExecuteEvents.ExecuteHierarchy<IHasChanged>(gameObject, null, (x,y) => x.HasChanged(gameObject));
+                    break;
+                }
+            }
+        }
     }
 
 
