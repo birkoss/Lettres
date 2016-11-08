@@ -6,7 +6,6 @@ TODO
 * Remove the container class (in both letters container)
 * Tweak the words list
   * Find new images (with outlines)
-* Bug when we swap with a disabled tiles
 * Too long word like creme glacée
 
 TWEAKS

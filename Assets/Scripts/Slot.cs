@@ -19,6 +19,10 @@ public class Slot : MonoBehaviour, IDropHandler {
     public void OnDrop(PointerEventData eventData) {
         // Get the starting position of the dragged item, and swap it with the existing item at this slot
         if (item) {
+            // If it's a disabled slot, stop right now
+            if (!item.GetComponent<DragHandler>().isDragable) {
+                return;
+            }
             Transform starting_parent = DragHandler.itemBeginDragged.transform.gameObject.GetComponent<DragHandler>().GetParent();
             item.transform.SetParent(starting_parent);
         }
