@@ -8,4 +8,3 @@ TODO
   * Find new images (with outlines)
 * Too long word like creme glacée
 * The winning popup should leave the word visible
-* Removed old instance of old fonts
