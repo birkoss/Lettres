@@ -49,7 +49,10 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
     }
 
     public void HasChanged(GameObject origin) {
-        nb_tries++;
+        // Only count tries when the slot is on the Destination
+        if (origin.transform.parent.parent.name == "Letters - Destination") {
+            nb_tries++;
+        }
 
         System.Text.StringBuilder builder = new System.Text.StringBuilder();
         foreach (Transform slotTransform in containerDestination) {

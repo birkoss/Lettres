@@ -1,296 +1,417 @@
 <WordsList>
     <Words>
-        <Word name="foods/apple-1">
+        <Word name="sprites/bikini">
+            <fr>BIKINI</fr>
+            <en>BIKINI</en>
+        </Word>
+        <Word name="sprites/book">
+            <fr>LIVRE</fr>
+            <en>BOOK</en>
+        </Word>
+        <Word name="sprites/bookmark">
+            <fr>ÉTOILE</fr>
+            <en>STAR</en>
+        </Word>
+        <Word name="sprites/cat">
+            <fr>CHAT</fr>
+            <en>CAT</en>
+        </Word>
+        <Word name="sprites/chair">
+            <fr>CHAISE</fr>
+            <en>CHAIR</en>
+        </Word>
+        <Word name="sprites/lion">
+            <fr>LION</fr>
+            <en>LION</en>
+        </Word>
+        <Word name="sprites/moon-phases">
+            <fr>LUNE</fr>
+            <en>MOON</en>
+        </Word>
+        <Word name="sprites/saturn">
+            <fr>PLANÈTE</fr>
+            <en>PLANET</en>
+        </Word>
+        <Word name="sprites/sky">
+            <fr>NUAGE</fr>
+            <en>CLOUD</en>
+        </Word>
+        <Word name="sprites/sun">
+            <fr>SOLEIL</fr>
+            <en>SUN</en>
+        </Word>
+        <Word name="sprites/televisions">
+            <fr>TÉLÉVISION</fr>
+            <en>TELEVISION</en>
+        </Word>
+        <Word name="sprites/wedding/diamond">
+            <fr>DIAMANT</fr>
+            <en>DIAMOND</en>
+        </Word>
+        <Word name="sprites/wedding/engagement-ring">
+            <fr>BAGUE</fr>
+            <en>RING</en>
+        </Word>
+        <Word name="sprites/wedding/hand-mirror">
+            <fr>MIROIR</fr>
+            <en>MIRROR</en>
+        </Word>
+        <Word name="sprites/wedding/key">
+            <fr>CLÉ</fr>
+            <en>KEY</en>
+        </Word>
+        <Word name="sprites/wedding/lock">
+            <fr>CADENAS</fr>
+            <en>LOCK</en>
+        </Word>
+        <Word name="sprites/wedding/suitcase">
+            <fr>VALISE</fr>
+            <en>SUITCASE</en>
+        </Word>
+        <Word name="sprites/wedding/wedding-dress">
+            <fr>ROBE</fr>
+            <en>DRESS</en>
+        </Word>
+        <Word name="sprites/wedding/wedding-photos">
+            <fr>PHOTO</fr>
+            <en>PHOTO</en>
+        </Word>
+        <Word name="sprites/png/bathtub">
+            <fr>BAIN</fr>
+            <en>BATHTUB</en>
+        </Word>
+        <Word name="sprites/png/beach">
+            <fr>PLAGE</fr>
+            <en>BEACH</en>
+        </Word>
+        <Word name="sprites/png/plane">
+            <fr>AVION</fr>
+            <en>PLANE</en>
+        </Word>
+        <Word name="sprites/png/sailboat">
+            <fr>BATEAU</fr>
+            <en>SAILBOAT</en>
+        </Word>
+        <Word name="sprites/foods/apple">
             <fr>POMME</fr>
             <en>APPLE</en>
         </Word>
-        <Word name="foods/asparagus">
-            <fr>ASPERGE</fr>
-            <en>ASPARAGUS</en>
+        <Word name="sprites/foods/artichoke">
+            <fr>ARTICHAUT</fr>
+            <en>ARTICHOKE</en>
         </Word>
-        <Word name="foods/aubergine">
-            <fr>AUBERGINE</fr>
-            <en>AUBERGINE</en>
-        </Word>
-        <Word name="foods/avocado">
+        <Word name="sprites/foods/avocado">
             <fr>AVOCAT</fr>
             <en>AVOCADO</en>
         </Word>
-        <Word name="foods/bacon">
+        <Word name="sprites/foods/bacon">
             <fr>BACON</fr>
             <en>BACON</en>
         </Word>
-        <Word name="foods/banana">
+        <Word name="sprites/foods/banana">
             <fr>BANANE</fr>
             <en>BANANA</en>
         </Word>
-        <Word name="foods/blueberries">
-            <fr>BLEUET</fr>
-            <en>BLUEBERRIES</en>
-        </Word>
-        <Word name="foods/bowl-1">
-            <fr>BOL</fr>
-            <en>BOWL</en>
-        </Word>
-        <Word name="foods/bread-1">
-            <fr>PAIN</fr>
-            <en>BREAD</en>
-        </Word>
-        <Word name="foods/broccoli">
-            <fr>BROCOLI</fr>
-            <en>BROCCOLI</en>
-        </Word>
-        <Word name="foods/cabbage">
-            <fr>CHOUX</fr>
-            <en>CABBAGE</en>
-        </Word>
-        <Word name="foods/cake">
-            <fr>GATEAU</fr>
-            <en>CAKE</en>
-        </Word>
-        <Word name="foods/candy">
-            <fr>BONBON</fr>
-            <en>CANDY</en>
-        </Word>
-        <Word name="foods/carrot">
-            <fr>CAROTTE</fr>
-            <en>CARROT</en>
-        </Word>
-        <Word name="foods/cauliflower">
-            <fr>CHOU-FLEUR</fr>
-            <en>CAULIFLOWER</en>
-        </Word>
-        <Word name="foods/cereals">
-            <fr>CEREALES</fr>
-            <en>CEREALS</en>
-        </Word>
-        <Word name="foods/cheese-1">
-            <fr>FROMAGE</fr>
-            <en>CHEESE</en>
-        </Word>
-        <Word name="foods/cherries">
-            <fr>CERISE</fr>
-            <en>CHERRIES</en>
-        </Word>
-        <Word name="foods/chili">
-            <fr>PIMENT</fr>
-            <en>CHILI</en>
-        </Word>
-        <Word name="foods/chips">
-            <fr>CROUSTILLES</fr>
-            <en>CHIPS</en>
-        </Word>
-        <Word name="foods/chocolate">
-            <fr>CHOCOLAT</fr>
-            <en>CHOCOLATE</en>
-        </Word>
-        <Word name="foods/coffee">
-            <fr>CAFÉ</fr>
-            <en>COFFEE</en>
-        </Word>
-        <Word name="foods/cookies">
-            <fr>BISCUIT</fr>
-            <en>COOKIES</en>
-        </Word>
-        <Word name="foods/corn">
-            <fr>MAÏS</fr>
-            <en>CORN</en>
-        </Word>
-        <Word name="foods/croissant">
-            <fr>CROISSANT</fr>
-            <en>CROISSANT</en>
-        </Word>
-        <Word name="foods/cucumber">
-            <fr>CONCOMBRE</fr>
-            <en>CUCUMBER</en>
-        </Word>
-        <Word name="foods/cupcake">
-            <fr>CUPCAKE</fr>
-            <en>CUPCAKE</en>
-        </Word>
-        <Word name="foods/cutlery">
-            <fr>USTENSILES</fr>
-            <en>CUTLERY</en>
-        </Word>
-        <Word name="foods/doughnut-1">
-            <fr>BEIGNE</fr>
-            <en>DOUGHNUT</en>
-        </Word>
-        <Word name="foods/egg">
-            <fr>OEUF</fr>
-            <en>EGG</en>
-        </Word>
-        <Word name="foods/fish">
-            <fr>POISSON</fr>
-            <en>FISH</en>
-        </Word>
-        <Word name="foods/flour">
-            <fr>FARINE</fr>
-            <en>FLOUR</en>
-        </Word>
-        <Word name="foods/fork">
-            <fr>FOURCHETTE</fr>
-            <en>FORK</en>
-        </Word>
-        <Word name="foods/fries">
-            <fr>FRITTES</fr>
-            <en>FRIES</en>
-        </Word>
-        <Word name="foods/garlic">
-            <fr>AIL</fr>
-            <en>GARLIC</en>
-        </Word>
-        <Word name="foods/grapes">
-            <fr>RAISIN</fr>
-            <en>GRAPES</en>
-        </Word>
-        <Word name="foods/hamburguer">
-            <fr>HAMBURGER</fr>
-            <en>HAMBURGER</en>
-        </Word>
-        <Word name="foods/hot-dog">
-            <fr>HOT-DOG</fr>
-            <en>HOT-DOG</en>
-        </Word>
-        <Word name="foods/ice-cream-11">
-            <fr>CRÈME GLACÉE</fr>
-            <en>ICE CREAM</en>
-        </Word>
-        <Word name="foods/knife">
-            <fr>COUTEAU</fr>
-            <en>KNIFE</en>
-        </Word>
-        <Word name="foods/lemon-1">
-            <fr>CITRON</fr>
-            <en>LEMON</en>
-        </Word>
-        <Word name="foods/lime">
-            <fr>LIME</fr>
-            <en>LIME</en>
-        </Word>
-        <Word name="foods/milk-1">
-            <fr>LAIT</fr>
-            <en>MILK</en>
-        </Word>
-        <Word name="foods/mushrooms">
-            <fr>CHAMPIGNONS</fr>
-            <en>MUSHROOMS</en>
-        </Word>
-        <Word name="foods/mustard-1">
-            <fr>MOUTARDE</fr>
-            <en>MUSTARD</en>
-        </Word>
-        <Word name="foods/mustard-2">
-            <fr>KETCHUP</fr>
-            <en>KETCHUP</en>
-        </Word>
-        <Word name="foods/olives">
-            <fr>OLIVES</fr>
-            <en>OLIVES</en>
-        </Word>
-        <Word name="foods/onion-1">
-            <fr>OIGNON</fr>
-            <en>ONION</en>
-        </Word>
-        <Word name="foods/orange">
-            <fr>ORANGE</fr>
-            <en>ORANGE</en>
-        </Word>
-        <Word name="foods/pancakes-1">
-            <fr>CRÈPES</fr>
-            <en>PANCAKES</en>
-        </Word>
-        <Word name="foods/peach">
-            <fr>PÈCHE</fr>
-            <en>PEACH</en>
-        </Word>
-        <Word name="foods/pear">
-            <fr>POIRE</fr>
-            <en>PEAR</en>
-        </Word>
-        <Word name="foods/peas">
-            <fr>POIS</fr>
-            <en>PEAS</en>
-        </Word>
-        <Word name="foods/pepper">
+        <Word name="sprites/foods/bell-pepper">
             <fr>POIVRON</fr>
             <en>PEPPER</en>
         </Word>
-        <Word name="foods/pineapple">
+        <Word name="sprites/foods/bread">
+            <fr>PAIN</fr>
+            <en>BREAD</en>
+        </Word>
+        <Word name="sprites/foods/broccoli">
+            <fr>BROCOLI</fr>
+            <en>BROCCOLI</en>
+        </Word>
+        <Word name="sprites/foods/brochette">
+            <fr>BROCHETTE</fr>
+            <en>BROCHETTE</en>
+        </Word>
+        <Word name="sprites/foods/cake">
+            <fr>GATEAU</fr>
+            <en>CAKE</en>
+        </Word>
+        <Word name="sprites/foods/candy">
+            <fr>BONBON</fr>
+            <en>CANDY</en>
+        </Word>
+        <Word name="sprites/foods/carrot">
+            <fr>CAROTTE</fr>
+            <en>CARROT</en>
+        </Word>
+        <Word name="sprites/foods/cheese">
+            <fr>FROMAGE</fr>
+            <en>CHEESE</en>
+        </Word>
+        <Word name="sprites/foods/cherries">
+            <fr>CERISE</fr>
+            <en>CHERRIES</en>
+        </Word>
+        <Word name="sprites/foods/chicken">
+            <fr>POULET</fr>
+            <en>CHICKEN</en>
+        </Word>
+        <Word name="sprites/foods/chocolate">
+            <fr>CHOCOLAT</fr>
+            <en>CHOCOLATE</en>
+        </Word>
+        <Word name="sprites/foods/cookie">
+            <fr>BISCUIT</fr>
+            <en>COOKIE</en>
+        </Word>
+        <Word name="sprites/foods/corn">
+            <fr>MAÏS</fr>
+            <en>CORN</en>
+        </Word>
+        <Word name="sprites/foods/crab">
+            <fr>CRABE</fr>
+            <en>CRAB</en>
+        </Word>
+        <Word name="sprites/foods/croissant">
+            <fr>CROISSANT</fr>
+            <en>CROISSANT</en>
+        </Word>
+        <Word name="sprites/foods/doughnut">
+            <fr>BEIGNE</fr>
+            <en>DOUGHNUT</en>
+        </Word>
+        <Word name="sprites/foods/eggplant">
+            <fr>AUBERGINE</fr>
+            <en>EGGPLANT</en>
+        </Word>
+        <Word name="sprites/foods/fish">
+            <fr>POISSON</fr>
+            <en>FISH</en>
+        </Word>
+        <Word name="sprites/foods/french-fries">
+            <fr>FRITE</fr>
+            <en>FRIES</en>
+        </Word>
+        <Word name="sprites/foods/fried-egg">
+            <fr>OEUF</fr>
+            <en>EGG</en>
+        </Word>
+        <Word name="sprites/foods/grapes-1">
+            <fr>RAISIN</fr>
+            <en>GRAPES</en>
+        </Word>
+        <Word name="sprites/foods/hamburger">
+            <fr>HAMBURGER</fr>
+            <en>HAMBURGER</en>
+        </Word>
+        <Word name="sprites/foods/honey">
+            <fr>MIEL</fr>
+            <en>HONEY</en>
+        </Word>
+        <Word name="sprites/foods/hot-dog">
+            <fr>HOT-DOG</fr>
+            <en>HOT-DOG</en>
+        </Word>
+        <Word name="sprites/foods/kiwi">
+            <fr>KIWI</fr>
+            <en>KIWI</en>
+        </Word>
+        <Word name="sprites/foods/lemon">
+            <fr>CITRON</fr>
+            <en>LEMON</en>
+        </Word>
+        <Word name="sprites/foods/lettuce">
+            <fr>LAITUE</fr>
+            <en>LETTUCE</en>
+        </Word>
+        <Word name="sprites/foods/lobster">
+            <fr>HOMARD</fr>
+            <en>LOBSTER</en>
+        </Word>
+        <Word name="sprites/foods/lollipop">
+            <fr>SUÇON</fr>
+            <en>LOLLIPOP</en>
+        </Word>
+        <Word name="sprites/foods/MUSHROOM">
+            <fr>CHAMPIGNON</fr>
+            <en>MUSHROOM</en>
+        </Word>
+        <Word name="sprites/foods/onion-1">
+            <fr>OIGNON</fr>
+            <en>ONION</en>
+        </Word>
+        <Word name="sprites/foods/orange">
+            <fr>ORANGE</fr>
+            <en>ORANGE</en>
+        </Word>
+        <Word name="sprites/foods/peach">
+            <fr>PÊCHE</fr>
+            <en>PEACH</en>
+        </Word>
+        <Word name="sprites/foods/pear">
+            <fr>POIRE</fr>
+            <en>PEAR</en>
+        </Word>
+        <Word name="sprites/foods/peas">
+            <fr>POIS</fr>
+            <en>PEAS</en>
+        </Word>
+        <Word name="sprites/foods/pepper">
+            <fr>PIMENT</fr>
+            <en>PEPPER</en>
+        </Word>
+        <Word name="sprites/foods/pineapple">
             <fr>ANANAS</fr>
             <en>PINEAPPLE</en>
         </Word>
-        <Word name="foods/pint">
-            <fr>BIÈRE</fr>
-            <en>BEER</en>
-        </Word>
-        <Word name="foods/pizza">
+        <Word name="sprites/foods/pizza">
             <fr>PIZZA</fr>
             <en>PIZZA</en>
         </Word>
-        <Word name="foods/pomegranate">
-            <fr>POMME GRENADE</fr>
-            <en>POMEGRANATE</en>
-        </Word>
-        <Word name="foods/potatoes-2">
-            <fr>PATATES</fr>
-            <en>POTATOES</en>
-        </Word>
-        <Word name="foods/pretzel">
-            <fr>BRETZEL</fr>
-            <en>PRETZEL</en>
-        </Word>
-        <Word name="foods/pumpkin">
+        <Word name="sprites/foods/pumpkin">
             <fr>CITROUILLE</fr>
             <en>PUMPKIN</en>
         </Word>
-        <Word name="foods/radish">
-            <fr>RADIS</fr>
-            <en>RADISH</en>
-        </Word>
-        <Word name="foods/raspberry">
-            <fr>FRAMBOISE</fr>
-            <en>RASPBERRY</en>
-        </Word>
-        <Word name="foods/sandwich-1">
+        <Word name="sprites/foods/sandwich">
             <fr>SANDWICH</fr>
             <en>SANDWICH</en>
         </Word>
-        <Word name="foods/sausage">
-            <fr>SAUCISSE</fr>
-            <en>SAUSAGE</en>
+        <Word name="sprites/foods/shrimp">
+            <fr>CREVETTE</fr>
+            <en>SHRIMP</en>
         </Word>
-        <Word name="foods/spaguetti">
-            <fr>SPAGHETTI</fr>
-            <en>SPAGHETTI</en>
+        <Word name="sprites/foods/steak">
+            <fr>STEAK</fr>
+            <en>STEAK</en>
         </Word>
-        <Word name="foods/spatula">
-            <fr>SPATULE</fr>
-            <en>SPATULA</en>
-        </Word>
-        <Word name="foods/spoon">
-            <fr>CUILLÈRE</fr>
-            <en>SPOON</en>
-        </Word>
-        <Word name="foods/strawberry">
+        <Word name="sprites/foods/strawberry">
             <fr>FRAISE</fr>
             <en>STRAWBERRY</en>
         </Word>
-        <Word name="foods/sushi-2">
+        <Word name="sprites/foods/sushi">
             <fr>SUSHI</fr>
             <en>SUSHI</en>
         </Word>
-        <Word name="foods/tomato">
+        <Word name="sprites/foods/tomato">
             <fr>TOMATE</fr>
             <en>TOMATO</en>
         </Word>
-        <Word name="foods/watermelon">
-            <fr>MELON D'EAU</fr>
-            <en>WATERMELON</en>
+        <Word name="sprites/foods/yogurt">
+            <fr>YOGOURT</fr>
+            <en>YOGURT</en>
         </Word>
-        <Word name="foods/whisk">
-            <fr>FOUET</fr>
-            <en>WHISK</en>
+        <Word name="sprites/farm/axe">
+            <fr>HACHE</fr>
+            <en>AXE</en>
         </Word>
+        <Word name="sprites/farm/barn">
+            <fr>FERME</fr>
+            <en>BARN</en>
+        </Word>
+        <Word name="sprites/farm/bees">
+            <fr>ABEILLE</fr>
+            <en>BEES</en>
+        </Word>
+        <Word name="sprites/farm/boot">
+            <fr>BOTTE</fr>
+            <en>BOOT</en>
+        </Word>
+        <Word name="sprites/farm/bucket">
+            <fr>SAUT</fr>
+            <en>BUCKET</en>
+        </Word>
+        <Word name="sprites/farm/cow">
+            <fr>VACHE</fr>
+            <en>COW</en>
+        </Word>
+        <Word name="sprites/farm/duck">
+            <fr>CANARD</fr>
+            <en>DUCK</en>
+        </Word>
+        <Word name="sprites/farm/farmer">
+            <fr>FERMIER</fr>
+            <en>FARMER</en>
+        </Word>
+        <Word name="sprites/farm/glove">
+            <fr>GANT</fr>
+            <en>GLOVE</en>
+        </Word>
+        <Word name="sprites/farm/hen">
+            <fr>POULE</fr>
+            <en>HEN</en>
+        </Word>
+        <Word name="sprites/farm/mill">
+            <fr>MOULIN</fr>
+            <en>MILL</en>
+        </Word>
+        <Word name="sprites/farm/pig">
+            <fr>COCHON</fr>
+            <en>PIG</en>
+        </Word>
+        <Word name="sprites/farm/plant">
+            <fr>PLANTE</fr>
+            <en>PLANT</en>
+        </Word>
+        <Word name="sprites/farm/rabbit">
+            <fr>LAPIN</fr>
+            <en>RABBIT</en>
+        </Word>
+        <Word name="sprites/farm/sheep">
+            <fr>MOUTON</fr>
+            <en>SHEEP</en>
+        </Word>
+        <Word name="sprites/farm/shovel-1">
+            <fr>PELLE</fr>
+            <en>SHOVEL</en>
+        </Word>
+        <Word name="sprites/farm/silo">
+            <fr>SILO</fr>
+            <en>SILO</en>
+        </Word>
+        <Word name="sprites/farm/tractor">
+            <fr>TRACTEUR</fr>
+            <en>TRACTOR</en>
+        </Word>
+        <Word name="sprites/farm/tree">
+            <fr>ARBRE</fr>
+            <en>TREE</en>
+        </Word>
+        <Word name="sprites/farm/well">
+            <fr>PUIT</fr>
+            <en>WELL</en>
+        </Word>
+        <Word name="sprites/farm/wheat">
+            <fr>BLÉ</fr>
+            <en>WHEAT</en>
+        </Word>
+        <Word name="sprites/christmas/angel">
+            <fr>ANGE</fr>
+            <en>ANGEL</en>
+        </Word>
+        <Word name="sprites/christmas/bell">
+            <fr>CLOCHE</fr>
+            <en>BELL</en>
+        </Word>
+        <Word name="sprites/christmas/bird">
+            <fr>OISEAU</fr>
+            <en>BIRD</en>
+        </Word>
+        <Word name="sprites/christmas/bow">
+            <fr>BOUCLE</fr>
+            <en>BOW</en>
+        </Word>
+        <Word name="sprites/christmas/candle">
+            <fr>BOUGIE</fr>
+            <en>CANDLE</en>
+        </Word>
+        <Word name="sprites/christmas/deer">
+            <fr>REINE</fr>
+            <en>DEER</en>
+        </Word>
+        <Word name="sprites/christmas/gift">
+            <fr>CADEAU</fr>
+            <en>GIFT</en>
+        </Word>
+        <Word name="sprites/christmas/snowflake">
+            <fr>FLOCON</fr>
+            <en>SNOWFLAKE</en>
+        </Word>
+
     </Words>
 </WordsList>
