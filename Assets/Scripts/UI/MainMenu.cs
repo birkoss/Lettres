@@ -74,7 +74,8 @@ public class MainMenu : MonoBehaviour {
     public void Cancel() {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
 
-        confirmation.GetComponent<ScreenConfirmation>().Close();
+        callback = DisablePopup;
+        StartCoroutine(ClosePopup(confirmation.GetComponent<Animator>()));
     }
 
 
@@ -89,9 +90,22 @@ public class MainMenu : MonoBehaviour {
 
     public void LoadNextLevel() {
         SoundEngine.instance.PlaySound(SoundEngine.instance.audioClick);
-        ExecuteEvents.ExecuteHierarchy<IChangeWord>(gameObject, null, (x,y) => x.ChangeWord());
+
+        callback = PrepareNextWord;
+        StartCoroutine(ClosePopup(GetComponent<Game>().screenWin.GetComponent<Animator>()));
     }
 
+    private IEnumerator ClosePopup(Animator anim) {
+        anim.Play("Sliding Out");
+        yield return new WaitForSeconds(0.6f);
+        callback();
+    }
 
+    private void DisablePopup() {
+        confirmation.SetActive(false);
+    }
 
+    private void PrepareNextWord() {
+        ExecuteEvents.ExecuteHierarchy<IChangeWord>(gameObject, null, (x,y) => x.ChangeWord());
+    }
 }

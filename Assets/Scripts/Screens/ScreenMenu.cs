@@ -25,4 +25,9 @@ public class ScreenMenu : MonoBehaviour {
         buttonChangeLanguage.gameObject.transform.GetChild(0).GetComponent<Text>().text = (lang == "fr" ? "English" : "Français");
     }
 
+
+    public void Show() {
+        gameObject.SetActive(true);
+    }
+
 }

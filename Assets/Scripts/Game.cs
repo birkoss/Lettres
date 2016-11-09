@@ -27,6 +27,8 @@ public class Game : MonoBehaviour, IHasChanged, IResetWord, IChangeWord {
         WordsList list = new WordsList();
         list.Load("words");
         book = new Book(list);
+
+        screenMenu.GetComponent<ScreenMenu>().Show();
     }
 
     public void Init() {
