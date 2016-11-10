@@ -19,9 +19,9 @@ public class ScreenMenu : MonoBehaviour {
             PlayerPrefs.SetString("lang", lang);
         }
 
-        buttonEasy.gameObject.transform.GetChild(0).GetComponent<Text>().text = (lang == "fr" ? "Facile" : "Easy");
-        buttonNormal.gameObject.transform.GetChild(0).GetComponent<Text>().text = (lang == "fr" ? "Moyen" : "Normal");
-        buttonHard.gameObject.transform.GetChild(0).GetComponent<Text>().text = (lang == "fr" ? "Difficile" : "Hard");
+        buttonEasy.gameObject.transform.GetChild(0).GetComponent<Text>().text = (lang == "fr" ? "Débutant" : "Easy");
+        buttonNormal.gameObject.transform.GetChild(0).GetComponent<Text>().text = (lang == "fr" ? "Apprenti" : "Normal");
+        buttonHard.gameObject.transform.GetChild(0).GetComponent<Text>().text = (lang == "fr" ? "Champion" : "Hard");
         buttonChangeLanguage.gameObject.transform.GetChild(0).GetComponent<Text>().text = (lang == "fr" ? "English" : "Français");
     }
 
